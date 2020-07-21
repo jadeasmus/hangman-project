@@ -1,6 +1,5 @@
 import random
 
-# category = sys.argv[1]  # category chosen
 game_word = ''
 player_word = ''
 attempt_count = 9
@@ -58,7 +57,7 @@ def end_game():
         end = False
 
 
-# driver code
+# driver
 print("Welcome to Hangman!!")
 print("I have chosen a word. It has " + str(len(game_word)) + " letters. The category is animals.")
 print("You have " + str(attempt_count) + " tries.")
@@ -70,6 +69,7 @@ for t in range(9):
     attempt_count -= 1
     guess_check(guess)
     update_word()
+    # hint()
     end_game()
 
 
